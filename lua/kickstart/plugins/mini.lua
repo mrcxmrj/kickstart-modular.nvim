@@ -34,6 +34,13 @@ return {
 
       require('mini.comment').setup()
       require('mini.pairs').setup()
+
+      local files = require 'mini.files'
+      files.setup { mappings = { synchronize = 'w' } }
+      vim.keymap.set('n', '<leader>fe', function()
+        local bufname = vim.api.nvim_buf_get_name(0)
+        local _ = files.close() or files.open(bufname, false)
+      end, { desc = 'File explorer' })
     end,
   },
 }
