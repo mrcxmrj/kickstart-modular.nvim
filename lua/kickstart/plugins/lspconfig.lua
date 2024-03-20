@@ -138,7 +138,7 @@ return {
       local servers = {
         pyright = {},
         html = {},
-        tsserver = {},
+        ['emmet-language-server'] = {},
         lua_ls = {
           -- cmd = {...},
           -- filetypes { ...},

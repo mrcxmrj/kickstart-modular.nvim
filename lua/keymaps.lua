@@ -37,6 +37,8 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Center after scrolling up' })
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Center after scrolling down' })
 
+vim.keymap.set('i', 'kj', '<Esc>')
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
