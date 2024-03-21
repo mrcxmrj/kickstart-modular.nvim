@@ -25,7 +25,7 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 -- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 -- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
--- Keybinds to make split navigation easier.
+-- Keybinds to make split navigation easier
 --  Use CTRL+<hjkl> to switch between windows
 --  See `:help wincmd` for a list of all window commands
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
@@ -33,11 +33,24 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Make scrolling and searching less disorienting
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Center after scrolling up' })
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Center after scrolling down' })
+vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Center after searching' })
+vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Center after searching back' })
 
-vim.keymap.set('i', 'kj', '<Esc>')
+vim.keymap.set('i', 'kj', '<Esc>', { desc = 'Exit insert mode' })
 
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selected down' })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move selected up' })
+
+vim.keymap.set('n', 'J', 'mzJ`z', { desc = "Don't move cursor when J-ing" })
+
+vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'Paste without yanking deletion' })
+vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Delete without yanking deletion' })
+
+vim.keymap.set('n', 'go', "<Cmd>call append(line('.'),     repeat([''], v:count1))<CR>")
+vim.keymap.set('n', 'gO', "<Cmd>call append(line('.') - 1, repeat([''], v:count1))<CR>")
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
