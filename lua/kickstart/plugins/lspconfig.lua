@@ -138,6 +138,7 @@ return {
         pyright = {},
         html = {},
         ['emmet-language-server'] = {},
+        ['typescript-language-server'] = {},
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
