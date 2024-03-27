@@ -39,8 +39,6 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Center after scrolling down' }
 vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Center after searching' })
 vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Center after searching back' })
 
-vim.keymap.set('i', 'kj', '<Esc>', { desc = 'Exit insert mode' })
-
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selected down' })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move selected up' })
 

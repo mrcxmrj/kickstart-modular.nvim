@@ -14,8 +14,10 @@ vim.opt.showmode = false
 
 -- Sync clipboard between OS and Neovim.
 vim.opt.clipboard = 'unnamedplus'
-vim.cmd [[
-  let g:clipboard = {
+
+if IS_WSL then
+  vim.cmd [[
+    let g:clipboard = {
           \   'name': 'win32yank-wsl',
           \   'copy': {
           \      '+': 'win32yank.exe -i --crlf',
@@ -27,7 +29,8 @@ vim.cmd [[
           \   },
           \   'cache_enabled': 0,
           \ }
-]]
+  ]]
+end
 
 -- Backup and undo
 vim.opt.swapfile = false

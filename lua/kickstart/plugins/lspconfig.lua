@@ -139,6 +139,7 @@ return {
         html = {},
         ['emmet-language-server'] = {},
         ['typescript-language-server'] = {},
+        clangd = {},
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
