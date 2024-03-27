@@ -47,8 +47,8 @@ vim.keymap.set('n', 'J', 'mzJ`z', { desc = "Don't move cursor when J-ing" })
 vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'Paste without yanking deletion' })
 vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Delete without yanking deletion' })
 
-vim.keymap.set('n', '<leader>o', "<Cmd>call append(line('.'),     repeat([''], v:count1))<CR>")
-vim.keymap.set('n', '<leader>O', "<Cmd>call append(line('.') - 1, repeat([''], v:count1))<CR>")
+vim.keymap.set('n', '<leader>o', "<Cmd>call append(line('.'),     repeat([''], v:count1))<CR>", { desc = 'New line below' })
+vim.keymap.set('n', '<leader>O', "<Cmd>call append(line('.') - 1, repeat([''], v:count1))<CR>", { desc = 'New line above' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
