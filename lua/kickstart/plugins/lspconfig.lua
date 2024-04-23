@@ -137,8 +137,11 @@ return {
       local servers = {
         pyright = {},
         html = {},
+        ['css-lsp'] = {},
+        ['tailwindcss-language-server'] = {},
         ['emmet-language-server'] = {},
         ['typescript-language-server'] = {},
+        ['json-lsp'] = {},
         clangd = {},
         lua_ls = {
           -- cmd = {...},

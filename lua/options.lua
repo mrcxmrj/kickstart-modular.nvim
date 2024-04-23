@@ -53,6 +53,14 @@ vim.opt.undofile = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+-- Turn off search highlighting, highlight current word as you type
+-- vim.opt.hlsearch = false
+-- vim.opt.incsearch = true
+
+-- Set highlight on search, but clear on pressing <Esc> in normal mode
+vim.opt.hlsearch = true
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
 -- Keep signcolumn on by default
 vim.opt.signcolumn = 'yes'
 
