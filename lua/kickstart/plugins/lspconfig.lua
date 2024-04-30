@@ -150,6 +150,7 @@ return {
         'isort',
         'prettierd',
         'clang-format',
+        'bash-language-server',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
