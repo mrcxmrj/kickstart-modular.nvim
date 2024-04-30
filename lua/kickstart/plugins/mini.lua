@@ -36,7 +36,7 @@ return {
       require('mini.pairs').setup()
 
       local files = require 'mini.files'
-      files.setup { mappings = { go_in_plus = '<CR>', synchronize = 'w' } }
+      files.setup { mappings = { go_in_plus = '<CR>', synchronize = 'w' }, options = { use_as_default_explorer = false } }
       vim.keymap.set('n', '<leader>fe', function()
         local bufname = vim.api.nvim_buf_get_name(0)
         local _ = files.close() or files.open(bufname, false)
