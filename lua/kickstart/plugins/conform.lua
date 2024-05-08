@@ -4,6 +4,10 @@ return {
     opts = {
       notify_on_error = false,
       format_on_save = function(bufnr)
+        -- Disable with a global variable
+        if vim.g.disable_autoformat then
+          return
+        end
         -- Disable "format_on_save lsp_fallback" for languages that don't
         -- have a well standardized coding style. You can add additional
         -- languages here or re-enable it for the disabled ones.
@@ -28,6 +32,19 @@ return {
         c = { 'clang-format' },
       },
     },
+  },
+  {
+    vim.api.nvim_create_user_command('ConformDisable', function()
+      vim.g.disable_autoformat = true
+    end, {
+      desc = 'Disable autoformat-on-save',
+      bang = true,
+    }),
+    vim.api.nvim_create_user_command('ConformEnable', function()
+      vim.g.disable_autoformat = false
+    end, {
+      desc = 'Re-enable autoformat-on-save',
+    }),
   },
 }
 -- vim: ts=2 sts=2 sw=2 et
