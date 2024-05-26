@@ -28,6 +28,7 @@ return {
         typescript = { { 'prettierd', 'prettier' } },
         javascriptreact = { { 'prettierd', 'prettier' } },
         typescriptreact = { { 'prettierd', 'prettier' } },
+        yaml = { 'prettierd' },
         go = { 'gofmt' },
         c = { 'clang-format' },
       },
