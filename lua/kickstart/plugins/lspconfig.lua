@@ -116,7 +116,6 @@ return {
         ['tailwindcss-language-server'] = {},
         ['emmet-language-server'] = {},
         ['typescript-language-server'] = {},
-        ['json-lsp'] = {},
         clangd = { filetypes = { 'c', 'cpp' } },
         lua_ls = {
           -- cmd = {...},
