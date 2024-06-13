@@ -10,7 +10,6 @@
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
-  -- Import plugins
   { import = 'kickstart.plugins' },
   { import = 'custom.plugins' },
 }, {
