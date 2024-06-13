@@ -33,7 +33,7 @@ return {
       end
 
       require('mini.comment').setup()
-      require('mini.pairs').setup()
+      -- require('mini.pairs').setup()
 
       local files = require 'mini.files'
       files.setup { mappings = { go_in_plus = '<CR>', synchronize = 'w' }, options = { use_as_default_explorer = false } }
