@@ -17,17 +17,17 @@ vim.opt.clipboard = 'unnamedplus'
 
 if IS_WSL then
   vim.g.clipboard = {
-    name = "win32yank-wsl",
+    name = 'win32yank-wsl',
     copy = {
-        ["+"] = "win32yank.exe -i --crlf",
-        ["*"] = "win32yank.exe -i --crlf",
+      ['+'] = 'win32yank.exe -i --crlf',
+      ['*'] = 'win32yank.exe -i --crlf',
     },
     paste = {
-        ["+"] = "win32yank.exe -o --lf",
-        ["*"] = "win32yank.exe -o --lf",
+      ['+'] = 'win32yank.exe -o --lf',
+      ['*'] = 'win32yank.exe -o --lf',
     },
     cache_enabled = true,
-}
+  }
 end
 
 -- Backup and undo
