@@ -30,6 +30,7 @@ return {
         typescriptreact = { { 'prettierd', 'prettier' } },
         json = { 'prettierd' },
         yaml = { 'prettierd' },
+        markdown = { 'prettierd' },
         go = { 'gofmt' },
         c = { 'clang-format' },
       },

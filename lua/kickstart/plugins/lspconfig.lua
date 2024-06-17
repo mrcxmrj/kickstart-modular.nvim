@@ -137,6 +137,7 @@ return {
         ['css-lsp'] = {},
         ['tailwindcss-language-server'] = {},
         ['emmet-language-server'] = {},
+        marksman = {},
         tsserver = {
           settings = {
             maxTsServerMemory = 12288,
