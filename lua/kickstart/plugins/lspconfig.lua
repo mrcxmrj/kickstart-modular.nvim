@@ -135,10 +135,15 @@ return {
         pyright = {},
         html = {},
         ['css-lsp'] = {},
-        ['tailwindcss-language-server'] = {},
+        -- ['tailwindcss-language-server'] = {},
         ['emmet-language-server'] = {},
         marksman = {},
         tsserver = {
+          init_options = {
+            preferences = {
+              importModuleSpecifierPreference = 'relative',
+            },
+          },
           settings = {
             maxTsServerMemory = 12288,
             typescript = {
@@ -167,7 +172,6 @@ return {
             },
           },
         },
-        clangd = { cmd = { 'clangd', '--function-arg-placeholders=0' }, filetypes = { 'c', 'cpp' } },
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
@@ -200,8 +204,8 @@ return {
         'black',
         'isort',
         'prettierd',
-        'clang-format',
         'bash-language-server',
+        'eslint_d',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
