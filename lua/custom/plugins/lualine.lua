@@ -23,7 +23,7 @@ return {
       },
       sections = {
         lualine_a = { 'mode' },
-        lualine_b = { 'branch', 'diagnostics' },
+        lualine_b = { 'branch', 'diff', 'diagnostics' },
         lualine_c = { Harpoonline.format, 'filename' },
         lualine_x = {
           'filetype',
