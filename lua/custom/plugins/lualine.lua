@@ -22,8 +22,8 @@ return {
         globalstatus = true,
       },
       sections = {
-        lualine_a = { 'branch' },
-        lualine_b = { 'diagnostics' },
+        lualine_a = { 'mode' },
+        lualine_b = { 'branch', 'diff', 'diagnostics' },
         lualine_c = { Harpoonline.format, 'filename' },
         lualine_x = {
           'filetype',
