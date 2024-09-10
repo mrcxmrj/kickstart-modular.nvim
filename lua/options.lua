@@ -5,6 +5,11 @@
 
 vim.opt.number = true
 vim.opt.relativenumber = true
+
+vim.keymap.set('n', '<leader>tr', function()
+  vim.opt.relativenumber = not vim.opt.relativenumber:get()
+end, { desc = '[T]oggle [R]elative numbers' })
+
 vim.opt.wrap = false
 
 vim.opt.mouse = 'a'
