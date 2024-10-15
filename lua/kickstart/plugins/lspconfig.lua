@@ -222,9 +222,10 @@ return {
         },
       }
 
-      vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-        underline = false,
-      })
+      -- vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+      --   -- virtual_text = false,
+      --   -- underline = false,
+      -- })
 
       require('lspconfig').gleam.setup {}
     end,
