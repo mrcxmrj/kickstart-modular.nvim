@@ -138,7 +138,7 @@ return {
         -- ['tailwindcss-language-server'] = {},
         ['emmet-language-server'] = {},
         marksman = {},
-        tsserver = {
+        ['typescript-language-server'] = {
           init_options = {
             preferences = {
               importModuleSpecifierPreference = 'relative',
