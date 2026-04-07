@@ -11,6 +11,9 @@ vim.keymap.set('n', '<leader>tr', function()
 end, { desc = '[T]oggle [R]elative numbers' })
 
 vim.opt.wrap = false
+vim.keymap.set('n', '<leader>tw', function()
+  vim.opt.wrap = not vim.opt.wrap:get()
+end, { desc = '[T]oggle [W]rap' })
 
 vim.opt.mouse = 'a'
 
@@ -49,6 +52,20 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+-- vim.api.nvim_create_autocmd('BufWinEnter', {
+--   pattern = { '*.md' },
+--   callback = function()
+--     vim.opt.wrap = true
+--   end,
+-- })
+--
+-- vim.api.nvim_create_autocmd({ 'BufWinLeave' }, {
+--   pattern = { '*.md' },
+--   callback = function()
+--     vim.opt.wrap = false
+--   end,
+-- })
+--
 vim.api.nvim_create_autocmd('FileType', {
   pattern = 'gleam',
   callback = function()
@@ -56,6 +73,12 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.opt_local.tabstop = 2
   end,
 })
+
+vim.filetype.add {
+  extension = {
+    flow = 'python',
+  },
+}
 
 -- Save undo history
 vim.opt.undofile = true
