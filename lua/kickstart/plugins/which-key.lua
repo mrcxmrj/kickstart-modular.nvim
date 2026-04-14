@@ -37,7 +37,7 @@ return {
         { '<leader>h', group = '[H]arpoon' },
         { '<leader>f', group = '[F]ile' },
         { '<leader>g', group = '[G]it', mode = { 'n', 'v' } },
-        { 'gr', group = 'LSP Actions', mode = { 'n' } },
+        -- { 'gr', group = 'LSP Actions', mode = { 'n' } },
       },
     },
   },
